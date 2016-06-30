@@ -1,0 +1,187 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+      
+
+	 <script type="text/javascript">	
+	 	$(function(){
+	 		$("#bioButton").click(function(){
+
+			  $("html, body").animate({
+			    scrollTop: $("#bioDiv").offset().top
+			  }, 800);
+			});
+			$("#projectsButton").click(function(){
+			  $("html, body").animate({
+			    scrollTop: $("#projectsDiv").offset().top
+			  }, 800);
+			});
+			$("#contactButton").click(function(){
+			  $("html, body").animate({
+			    scrollTop: $("#contactDiv").offset().top
+			  }, 800);
+			});
+	 	});
+			
+	  </script>
+</head>
+
+<body>
+  
+
+  <style>
+		body {
+		  background-color: #b5a397
+		}
+
+		.titleBar {
+		  
+		  background-color: #30231d;
+		}
+
+		.textLogo {
+		  margin: 16px 0px 0px 20px;
+		  color: white;
+		}
+
+		.btn-default {
+		  margin: 10px 0px 10px 0px;
+		}
+
+		.container .jumbotron {
+		  border-radius: 0px;
+		   border-bottom-width:1px;
+		   border-bottom-color:#6a5750;;
+		   border-bottom-style: solid;
+		   margin-bottom: 0px;
+
+		}
+
+		.circlePicture {
+		  border-radius: 50%;
+		}
+
+		.bioBackground {
+		  background-color: #6a5750;
+		}
+
+		.bioBackground p {
+		  color: white;
+		}
+
+		.portfolioPic {
+		  margin-bottom: 30px;
+		}
+  </style>
+
+
+<div class="fluid-container">
+  <div class="row titleBar">
+    <div class="col-md-2"><h3 class="textLogo">Michael Kolbeck</h3></div>
+    <div class="col-md-7"></div>
+    <div class="col-md-1"><button class="btn btn-default" id="bioButton">About Me</button></div>
+    <div class="col-md-1"><button class="btn btn-default" id="projectsButton">Projects</button></div>
+    <div class="col-md-1"><button class="btn btn-default" id="contactButton">Contact</button></div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="jumbotron bioBackground" id="bioDiv">
+      <div class="row">
+        <div class="col-md-8">
+        <p>Michael Kolbeck, Computer Science graduate student and part-time teacher of computer literacy and programming. Experience in software support and object oriented software development in Python and Java. </p>
+        <br>
+        <p>--------------------------------------------------------------------------------------------</p>
+        <br>
+        <p>Below, you will find a series of projects made as part of the freecodecamp.com curriculum (placeholders will be replaced).</p>
+          </div>
+        <div class="col-md-4"><img class="img-responsive circlePicture" src="https://s32.postimg.org/qjzxi8579/thumb_Head.png"></div>
+      </div>
+  </div>
+  <div class="jumbotron" id="projectsDiv"><h3 class="text-center">------ Projects ------</h3>
+    <br><br>
+    <div class="row">
+      <div class="col-md-6">
+        <a href="http://codepen.io/Kolbeckenstein/pen/oLLMQP"><img class="img-responsive portfolioPic" style="margin-bottom: 74px;" src="https://s31.postimg.org/x8tppx76j/Cabbage_Shot.png"></a>
+        <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
+        <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
+      </div>
+      <div class="col-md-6">
+        <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
+        <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
+        <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron" id="contactDiv"><h3 class="text-center">------ Contact Information ------</h3>
+    <br><br>
+    <div class="row">
+      <div class="col-md-6">
+        <form role="form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="phone" class="form-control" id="phone">
+          </div>
+          <div class="form-group">
+            <label for="comment">Message:</label>
+            <textarea class="form-control" rows="5" id="message"></textarea>
+          </div>
+          <div class="form-group"><button class="btn btn-default" type="submit">Send</button></div>
+        </form>
+        
+        
+        
+      </div>
+      <div class="col-md-6">
+        <p>Want to get in touch? I would like to hear from you! Just fill out the form on the left (currently under construction), or contact me though one of the social media profiles linked below. </p>
+        <br><br><br>
+        <p>Please no solicitation.</p>
+        <br><br><br><br><br><br><br><br>
+        <div class="row">
+          <div class="col-xs-6"></div>
+          <div class="col-xs-2">
+            <a href="https://www.facebook.com/michael.kolbeck.505">
+              <img class="img-responsive" src="http://abdallanet.hexat.com/images/facebook-icon-flat.png">
+            </a>
+          </div>
+          <div class="col-xs-2">
+            <a href="https://www.linkedin.com/in/michael-kolbeck-8b67a11b">
+              <img class="img-responsive" src="http://mh.cli.im/images/preset/logo/linkedin-small.png">
+            </a>
+          </div>
+          <div class="col-xs-2">
+            <a href="https://github.com/Kolbeckenstein">
+              <img class="img-responsive" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRR9aOEDQo6QZpXWFihaqmpZu9_y4t78fiZbIekjAVcUB1OBWVM_w">
+            </a>      
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+</body>
+</html>
