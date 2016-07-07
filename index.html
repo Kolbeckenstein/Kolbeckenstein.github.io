@@ -16,24 +16,76 @@
       
 
 	 <script type="text/javascript">	
-	 	$(function(){
-	 		$("#bioButton").click(function(){
 
-			  $("html, body").animate({
-			    scrollTop: $("#bioDiv").offset().top
-			  }, 800);
+	 		$(document).ready(function(){
+
+		 		$("#bioButton").click(function(){
+				  $("html, body").animate({
+				    scrollTop: $("#bioDiv").offset().top
+				  }, 800);
+				});
+
+				$("#projectsButton").click(function(){
+				  $("html, body").animate({
+				    scrollTop: $("#projectsDiv").offset().top
+				  }, 800);
+				});
+
+				$("#contactButton").click(function(){
+				  $("html, body").animate({
+				    scrollTop: $("#contactDiv").offset().top
+				  }, 800);
+				});
+
+				$("#submitButton").click(function(){
+					$("body").css('background-color', "black");
+
+    /*					
+					$.ajax({
+					  beforeSend: function (xhr){
+              xhr.setRequestHeader ("Authorization", "Basic " + btoa("api" + ":" + "key-052a7ac419680fd61b57c9718e6fd989"));
+            }
+					  type: "POST",
+					  url: "https://api.mailgun.net/v3/sandbox0990300b3b394c9fb9834c05eb5d6f74.mailgun.org/messages",
+            dataType: 'json',
+					  data: {
+					  	"from": "Mailgun Sandbox <postmaster@sandbox0990300b3b394c9fb9834c05eb5d6f74.mailgun.org>",
+					  	"to": "Michael Kolbeck <kolbeckenstein@gmail.com>",
+					  	"subject": "Automated message from " + "TEST",
+					  	"text" : "Message was successfully sent!"
+					  },
+					  success: function (){
+              alert('Ajex sent!'); 
+            } 
+
+					});
+    */    
+//   /*
+          $.ajax({
+            //headers: {"Authorization": "Basic "+btoa("api:key-052a7ac419680fd61b57c9718e6fd989")},
+            //beforeSend: function(xhr){
+            //  xhr.setRequestHeader("api", "key-052a7ac419680fd61b57c9718e6fd989");
+            //},
+            type: "POST",
+            url: "https://api.mailgun.net/v3/sandbox0990300b3b394c9fb9834c05eb5d6f74.mailgun.org/messages",
+            dataType: 'json',
+            data: {
+              "from": "Mailgun Sandbox <postmaster@sandbox0990300b3b394c9fb9834c05eb5d6f74.mailgun.org>",
+              "to": "kolbeckenstein@gmail.com",
+              "subject": "Automated message from TEST",
+              "text" : "Message was successfully sent!"
+            },
+            cache: false,
+            success: function(){
+              alert("Ajax sent!");
+            },
+            error: function(){
+              alert('problems');
+            }
+          });
+		 		});
 			});
-			$("#projectsButton").click(function(){
-			  $("html, body").animate({
-			    scrollTop: $("#projectsDiv").offset().top
-			  }, 800);
-			});
-			$("#contactButton").click(function(){
-			  $("html, body").animate({
-			    scrollTop: $("#contactDiv").offset().top
-			  }, 800);
-			});
-	 	});
+//    */
 			
 	  </script>
 </head>
@@ -114,12 +166,13 @@
     <br><br>
     <div class="row">
       <div class="col-md-6">
-        <a href="http://codepen.io/Kolbeckenstein/pen/oLLMQP"><img class="img-responsive portfolioPic" style="margin-bottom: 74px;" src="https://s31.postimg.org/x8tppx76j/Cabbage_Shot.png"></a>
-        <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
+        <a href="http://codepen.io/Kolbeckenstein/pen/oLLMQP"><img class="img-responsive portfolioPic" style="margin-bottom: 26px;" src="https://s31.postimg.org/x8tppx76j/Cabbage_Shot.png"></a>
+        <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">        
         <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
       </div>
       <div class="col-md-6">
-        <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
+      	<a href="http://codepen.io/Kolbeckenstein/pen/WxpmEz"><img class="img-responsive portfolioPic" style="margin-bottom: 60px;" src="https://s32.postimg.org/s05dw8edh/quote_Shot.jpg"></a>
+
         <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
         <img class="img-responsive portfolioPic" src="http://laurentvandessel.be/wp-content/uploads/2014/03/placeholder.png">
       </div>
@@ -129,7 +182,7 @@
     <br><br>
     <div class="row">
       <div class="col-md-6">
-        <form role="form">
+
           <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" class="form-control" id="name">
@@ -146,8 +199,8 @@
             <label for="comment">Message:</label>
             <textarea class="form-control" rows="5" id="message"></textarea>
           </div>
-          <div class="form-group"><button class="btn btn-default" type="submit">Send</button></div>
-        </form>
+          <div class="form-group"><button class="btn btn-default" id="submitButton">Send</button></div>
+
         
         
         
